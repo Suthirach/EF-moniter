@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/devid3k/Desktop/TestDEVOps/EF-moniter/build/cmake_install.cmake",
+		"/Users/devid3k/Desktop/TestDEVOps/EF-moniter/build/lvgl/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
