@@ -27,6 +27,9 @@ add_executable(main main.c mouse_cursor_icon.c)
 
 target_compile_definitions(main PRIVATE LV_CONF_INCLUDE_SIMPLE)
 target_link_libraries(main lvgl lvgl::examples lvgl::demos lvgl::thorvg ${SDL2_LIBRARIES} m pthread)
+if(APPLE)
+    target_link_libraries(main "-framework CoreMIDI" "-framework CoreFoundation")
+endif()
 add_custom_target (run COMMAND ${EXECUTABLE_OUTPUT_PATH}/main DEPENDS main)
 
 if(LV_USE_DRAW_SDL)
